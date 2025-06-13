@@ -1,0 +1,54 @@
+/*
+ * build.gradle
+ * CompunetProject – ICE slice2java en subproyectos
+ */
+
+plugins {
+    id 'com.zeroc.gradle.ice-builder.slice' version '1.5.0' apply false
+}
+
+subprojects { proj ->
+    if (proj.name in ['Master','Worker','Client']) {
+        apply plugin: 'java'
+        apply plugin: 'com.zeroc.gradle.ice-builder.slice'
+
+        slice {
+            // Indica dónde tienes ICE instalado
+            iceHome = file("C:/Program Files/ZeroC/Ice-3.7.10")
+            java {
+                // Toma el IDL desde la raíz
+                files = [ file('../App.ice') ]
+            }
+        }
+
+        repositories {
+            mavenCentral()
+        }
+
+        dependencies {
+            implementation 'com.zeroc:ice:3.7.10'
+        }
+
+        // Incluye los fuentes ICE generados
+        sourceSets {
+            main {
+                java {
+                    srcDirs = ['src/main/java', 'build/generated-src']
+                }
+            }
+        }
+
+        // Asegura que primero genere los stubs
+        compileJava.dependsOn compileSlice
+
+        // Empaqueta tu jar con manifest apuntando a Main-Class
+        jar {
+            manifest {
+                attributes(
+                        'Main-Class': proj.name.capitalize(),
+                        'Class-Path': configurations.runtimeClasspath.files*.name.join(' ')
+                )
+            }
+        }
+    }
+}

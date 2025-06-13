@@ -1,0 +1,18 @@
+<state>
+  <timestamp value='1749773644091' />
+  <sourceSet name='default'>
+    <source name='C:\Users\melyb\Downloads\CompunetProject copy 3\CompunetProject copy\App.ice'>
+      <file name='C:\Users\melyb\Downloads\CompunetProject copy 3\CompunetProject copy\Client\src\main\java\Demo\Subscriber.java' />
+      <file name='C:\Users\melyb\Downloads\CompunetProject copy 3\CompunetProject copy\Client\src\main\java\Demo\ClientCallback.java' />
+      <file name='C:\Users\melyb\Downloads\CompunetProject copy 3\CompunetProject copy\Client\src\main\java\Demo\Publisher.java' />
+      <file name='C:\Users\melyb\Downloads\CompunetProject copy 3\CompunetProject copy\Client\src\main\java\Demo\SubscriberPrx.java' />
+      <file name='C:\Users\melyb\Downloads\CompunetProject copy 3\CompunetProject copy\Client\src\main\java\Demo\_SubscriberPrxI.java' />
+      <file name='C:\Users\melyb\Downloads\CompunetProject copy 3\CompunetProject copy\Client\src\main\java\Demo\ClientCallbackPrx.java' />
+      <file name='C:\Users\melyb\Downloads\CompunetProject copy 3\CompunetProject copy\Client\src\main\java\Demo\_ClientCallbackPrxI.java' />
+      <file name='C:\Users\melyb\Downloads\CompunetProject copy 3\CompunetProject copy\Client\src\main\java\Demo\PublisherPrx.java' />
+      <file name='C:\Users\melyb\Downloads\CompunetProject copy 3\CompunetProject copy\Client\src\main\java\Demo\_PublisherPrxI.java' />
+    </source>
+    <arg value='C:\Program Files\ZeroC\Ice-3.7.10\bin\slice2java.exe' />
+    <arg value='-IC:\Program Files\ZeroC\Ice-3.7.10\slice' />
+  </sourceSet>
+</state>
